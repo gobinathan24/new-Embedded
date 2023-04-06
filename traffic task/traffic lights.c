@@ -1,0 +1,93 @@
+#include<pic.h>
+#define _XTAL_FREQ 400000
+void pulse()
+{
+RB2=1;
+__delay_ms(50);
+RB2=0;
+__delay_ms(50);
+}
+void type()
+{
+RB0=0;RB1=0;
+PORTA=0X38;
+pulse();
+}
+void on()
+{
+RB0=0;RB1=0;
+PORTA=0X0E;
+pulse();
+}
+void address()
+{
+RB0=0;RB1=0;
+PORTA=0X80;
+pulse();
+}
+void display(int a,int b)
+{
+RB0=b;RB1=0;
+PORTA=a;
+pulse();
+}
+void main()
+{
+TRISA=0X00;
+PORTA=0X00;
+TRISC=0X00;
+PORTC=0X00;
+TRISB=0X00;
+PORTB=0X00;
+TRISD=0X00;
+PORTD=0X00;
+ANSEL=0X00;
+ANSELH=0X00;
+address(0x80);
+type();
+on();
+display(0x80,0);
+OPTION_REG=0X07;
+int count=0,sum,sum1,sum2;
+T0IF=0;
+TMR0=38;
+while(1)
+{
+if(T0IF==1)
+{
+count++;
+sum=count/100;
+sum1=(count%100)/10;
+sum2=count%10;
+display(0x80,0);
+display(sum+0x30,1);
+display(0x81,0);
+display(sum1+0x30,1);
+display(0x82,0);
+display(sum2+0x30,1);
+T0IF==0;
+}
+if(count<=90)
+{
+RC1=0;RC2=0;RD0=0;RD1=0;
+RC0=1;
+RD2=1;
+}
+if(count>90&&count<120)
+{
+RC0=0;RC2=0;RD0=0;RD2=0;
+RC1=1;
+RD1=1;
+}
+if(count<=180)
+{
+RC0=0;RC1=0;RD1=0;RD2=0;
+RD0=1;
+RC2=1;
+}
+if(count==270)
+{
+count=0;
+}
+}
+}

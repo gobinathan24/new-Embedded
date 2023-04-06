@@ -1,0 +1,134 @@
+__S0 800 0 ABS
+__S1 D4 0 ABS
+__S2 0 0 ABS
+__Hintentry 0 0 CODE
+__Lintentry 0 0 CODE
+_main 783 0 CODE
+btemp 7E 0 ABS
+_exit 0 0 CODE
+start 0 0 CODE
+main@F1600 A0 0 BANK1
+_TRISA 85 0 ABS
+_TRISB 86 0 ABS
+_PORTA 5 0 ABS
+reset_vec 0 0 CODE
+_PORTB 6 0 ABS
+_ANSEL 188 0 ABS
+wtemp0 7E 0 ABS
+main@F1602 BA 0 BANK1
+__Hconfig 0 0 CONFIG
+__Lconfig 0 0 CONFIG
+main@i 54 0 BANK0
+main@j 56 0 BANK0
+__Hram 0 0 ABS
+__Lram 0 0 ABS
+?_main 70 0 COMMON
+__Hfunctab 0 0 CODE
+__Lfunctab 0 0 CODE
+__Hcommon 0 0 ABS
+__Lcommon 0 0 ABS
+__Heeprom_data 0 0 EEDATA
+__Leeprom_data 0 0 EEDATA
+_ANSELH 189 0 ABS
+__Habs1 0 0 ABS
+__Labs1 0 0 ABS
+__Hsfr0 0 0 ABS
+__Lsfr0 0 0 ABS
+__Hsfr1 0 0 ABS
+__Lsfr1 0 0 ABS
+__Hsfr2 0 0 ABS
+__Lsfr2 0 0 ABS
+__Hsfr3 0 0 ABS
+__Lsfr3 0 0 ABS
+init_fetch 72C 0 CODE
+main@cc 20 0 BANK0
+__Hcode 0 0 ABS
+__Lcode 0 0 ABS
+??_main 70 0 COMMON
+__HcstackBANK0 0 0 ABS
+__LcstackBANK0 0 0 ABS
+__pcstackBANK0 20 0 BANK0
+__Hinit 0 0 CODE
+__Linit 0 0 CODE
+__end_of_main 800 0 CODE
+__Htext 0 0 ABS
+__Ltext 0 0 ABS
+end_of_initialization 74B 0 CODE
+__HdataBANK1 0 0 ABS
+__LdataBANK1 0 0 ABS
+__pdataBANK1 A0 0 BANK1
+__Hstrings 0 0 ABS
+__Lstrings 0 0 ABS
+main@cc1 3A 0 BANK0
+__Hbank0 0 0 ABS
+__Lbank0 0 0 ABS
+__Hbank1 0 0 ABS
+__Lbank1 0 0 ABS
+__Hbank2 0 0 ABS
+__Lbank2 0 0 ABS
+__Hbank3 0 0 ABS
+__Lbank3 0 0 ABS
+__Hpowerup 0 0 CODE
+__Lpowerup 0 0 CODE
+__Hclrtext 0 0 ABS
+__Lclrtext 0 0 ABS
+__Hidloc 0 0 IDLOC
+__Lidloc 0 0 IDLOC
+init_ram 730 0 CODE
+__Hcinit 0 0 ABS
+__Lcinit 0 0 ABS
+__size_of_main 0 0 ABS
+__HidataBANK1 0 0 ABS
+__LidataBANK1 0 0 ABS
+__pidataBANK1 74F 0 CODE
+__Hend_init 3 0 CODE
+__Lend_init 0 0 CODE
+__Hreset_vec 0 0 CODE
+__Lreset_vec 0 0 CODE
+intlevel0 0 0 CODE
+intlevel1 0 0 CODE
+intlevel2 0 0 CODE
+intlevel3 0 0 CODE
+intlevel4 0 0 CODE
+intlevel5 0 0 CODE
+__HcstackCOMMON 0 0 ABS
+__LcstackCOMMON 0 0 ABS
+__pcstackCOMMON 70 0 COMMON
+start_initialization 73D 0 CODE
+__Hmaintext 0 0 ABS
+__Lmaintext 0 0 ABS
+__pmaintext 783 0 CODE
+__Hinittext 0 0 ABS
+__Linittext 0 0 ABS
+%segments
+reset_vec 0 5 CODE 0
+cstackCOMMON 70 73 COMMON 70
+cstackBANK0 20 57 BANK0 20
+dataBANK1 A0 D3 BANK1 A0
+maintext F06 FFF CODE F06
+idataBANK1 E9E F05 CODE E9E
+cinit E7A E9D CODE E7A
+inittext E58 E79 CODE E58
+%locals
+startup.obj
+startup.as
+65 0 0 CODE
+14segment new cc.obj
+D:\New folder\14segment new cc.c
+5 74F 0 CODE
+6 769 0 CODE
+5 783 0 CODE
+6 798 0 CODE
+7 7AD 0 CODE
+8 7B0 0 CODE
+9 7B3 0 CODE
+10 7B6 0 CODE
+11 7B9 0 CODE
+12 7BC 0 CODE
+15 7BE 0 CODE
+17 7C5 0 CODE
+18 7CD 0 CODE
+19 7D2 0 CODE
+15 7DE 0 CODE
+13 7FC 0 CODE
+22 7FD 0 CODE
